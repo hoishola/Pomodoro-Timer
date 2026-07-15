@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+       <header class="header">
+        <div>
+          <h1>PushLimit</h1>
+          <nav>
+            <div id="settingsBtn"><ion-icon name="cog-outline"></ion-icon></p></div>
+             <div id="taskBtn"><ion-icon name="list-circle-outline"></ion-icon><p></p></div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="panel-overlay" id="settingsOverlay">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Settings</h3>
+            <button class="close-btn" id="closeSettings">&times;</button>
+          </div>
+          <div class="panel-body">
+            <label class="panel-label">Focus duration (minutes)</label>
+            <input type="number" class="panel-input" id="focusInput" value="25" min="1" max="90">
+
+            <label class="panel-label">Short break (minutes)</label>
+            <input type="number" class="panel-input" id="shortBreakInput" value="5" min="1" max="30">
+
+            <label class="panel-label">Long break (minutes)</label>
+            <input type="number" class="panel-input" id="longBreakInput" value="15" min="1" max="60">
+
+            <button class="save-btn" id="saveSettings">Save changes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-overlay" id="taskOverlay">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Tasks</h3>
+            <button class="close-btn" id="closeTasks">&times;</button>
+          </div>
+          <div class="panel-body">
+            <div class="task-input-row">
+              <input type="text" class="panel-input" id="taskInput" placeholder="Add a new task">
+              <button class="add-task-btn" id="addTaskBtn">Add</button>
+            </div>
+            <ul class="task-list" id="taskList"></ul>
+          </div>
+        </div>
+      </div>
+      <main>
+       <div id="timerSection">
+  <div class="pt-div">
+    <h2 class="pt">Pomodoro Timer</h2>
+    <p class="pt-note">Work with focus. Track tasks. Build momentum.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active">Flow</button>
+    <button class="tab">Short Break</button>
+    <button class="tab">Long Break</button>
+  </div>
+
+  <div class="timer-display-wrap">
+    <button class="timer-display">25:00</button>
+  </div>
+
+  <div class="timer-controls">
+    <button class="control-btn start-btn">Start</button>
+    <button class="control-btn reset-btn">Reset</button>
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn">Focus 25 min</button>
+    <button class="preset-btn">Break 5 min</button>
+  </div>
+</div>
+
+        <div class="info-block">
+  <h3>What is the Pomodoro Technique?</h3>
+  <p>The Pomodoro Technique is a time management method created by Francesco Cirillo in the late 1980s. It helps you stay focused by breaking work into short, dedicated intervals called Pomodoros.</p>
+  <p>A typical cycle looks like this:</p>
+  <ul>
+    <li>🍅Focus for 25 minutes</li>
+    <li>☕Take a 5-minute break</li>
+    <li>🔁Repeat the cycle four times</li>
+    <li>🌿 After four Pomodoros, take a longer break of 15–30 minutes</li>
+  </ul>
+  <p>Working in short, focused sessions makes it easier to start tasks, maintain concentration, and avoid mental fatigue.</p>
+</div>
+
+<div class="info-block">
+  <h4>Why It Works</h4>
+  <p>The Pomodoro Technique is effective because it encourages deep focus while preventing burnout.</p>
+  <p>Benefits include:</p>
+  <ul>
+    <li>Improved concentration with fewer distractions.</li>
+    <li>Better time awareness and planning.</li>
+    <li>Less procrastination by making large tasks feel manageable.</li>
+    <li>Regular breaks that help maintain energy throughout the day.</li>
+    <li>Increased productivity without working longer hours.</li>
+  </ul>
+</div>
+
+<div class="info-block">
+  <h5>Pro Tips</h5>
+  <ul>
+    <li>🎯 Start each session with one clear goal.</li>
+    <li>📵 Silence notifications before the timer begins.</li>
+    <li>📝 Keep a notepad nearby to capture distracting thoughts instead of acting on them.</li>
+    <li>💧 Use your breaks to stretch, hydrate, or move around.</li>
+    <li>✅ Track completed Pomodoros to measure your progress over time.</li>
+    <li>🚀 Tackle your most important task during your first Pomodoro of the day.</li>
+    <li>🌙 Stop before you're completely exhausted "consistency beats overworking".</li>
+  </ul>
+</div>
+
+        <section class="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>Is 25 minutes the only option?</summary>
+    <p>
+      No. You can customize the timer to fit your workflow. Many people use
+      30, 45, or even 50-minute focus sessions.
+    </p>
+  </details>
+
+  <details>
+    <summary>What should I do during breaks?</summary>
+    <p>
+      Step away from your workspace, stretch, drink water, or take a short walk.
+    </p>
+  </details>
+
+  <details>
+    <summary>Can I pause a Pomodoro?</summary>
+    <p>
+      Yes, but try to minimize interruptions so each session stays focused.
+    </p>
+  </details>
+
+  <details>
+    <summary>Does this work for studying?</summary>
+    <p>
+      Absolutely. The Pomodoro Technique is widely used by students,
+      developers, writers, and professionals.
+    </p>
+  </details>
+
+  <details>
+  <summary>Have a feature request, found a bug, or want to share feedback?</summary>
+
+  <p>
+    We'd love to hear from you.
+  </p>
+
+  <a href="mailto:hoishola973@gmail.com?subject=Pomodoro%20Feedback" class="contact-btn">
+    Send it here →
+  </a>
+</details>
+</section>
+
+<div class="cta-block">
+  <p class="cta-text">Ready to get things done?</p>
+  <button class="cta-btn">Enter Focus Mode</button>
+</div>
+      </main>
+
+      <script src="script.js"></script>
+    </body>
+</html>
