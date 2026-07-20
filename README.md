@@ -6,7 +6,7 @@ A clean and responsive Pomodoro Timer built with HTML, CSS, and JavaScript to he
 
 ## 🚀 Live Demo
 
-https://codewithho.github.io/Pomodoro-Timer/
+https://hoishola.github.io/Pomodoro-Timer/
 
 ---
 
@@ -66,7 +66,7 @@ pomodoro-timer/
 
 Made with ❤️ by Habeeb Ishola
 
-GitHub: https://github.com/codewithHo
+GitHub: https://github.com/hoishola
 
 ---
 
